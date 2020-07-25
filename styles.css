@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(119, 8, 77);
+}
+
+.box {
+    margin: 300px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.box div {
+    width: 100px;
+    height: 100px;
+}
