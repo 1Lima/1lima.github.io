@@ -1,0 +1,142 @@
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 36px 16px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  overflow: hidden;
+
+  @include responsive(){
+    flex-direction: column;
+    height: auto;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 3.5em;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 16px;
+    color: $gray-dark;
+    letter-spacing: 1px;
+    line-height: 140%;
+  }
+
+  .container-item-1 {
+    max-width: 600px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background: linear-gradient(
+      110deg,
+      $blue-dark 10%,
+      rgba(11, 12, 16, 0.8) 50%,
+      $blue-dark 80%
+    );
+  }
+}
+
+.bg-loader {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(225deg, $red 0%, $red-dark 100%);
+  overflow: hidden;
+
+  img {
+    max-width: 200px;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.footer-container {
+  max-width: 1440px;
+  margin: 30px auto;
+  padding: 30px 16px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .footer-container-item-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    .credits {
+      max-width: 500px;
+  
+      p {
+        font-size: 16px;
+        color: $gray-dark;
+        letter-spacing: 1px;
+        line-height: 140%;
+      }
+  
+      a {
+        i {
+          color: $white;
+          font-size: 16px;
+          letter-spacing: 10px;
+          transition: .5s ease;
+        
+          &:hover {
+            color: #E91D22;
+          }
+        }
+      }
+    }
+  }
+  
+  .footer-container-item-2 {
+    width: 800px;
+  
+    .sponsors {
+      display: flex;
+  
+      img {
+        margin-left: 30px;
+        max-width: 100px;
+      }
+    }
+  }
+}
